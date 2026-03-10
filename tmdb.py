@@ -69,7 +69,9 @@ async def fetch_reviews(movie_id: int) -> tuple[str, list[dict]]:
                         "created_at": r.get("created_at", ""),
                     }
                 )
-            if len(page_results) == 0 or rev_data.get("page", 1) >= rev_data.get("total_pages", 1):
+            if len(page_results) == 0 or rev_data.get("page", 1) >= rev_data.get(
+                "total_pages", 1
+            ):
                 break
 
     return title, reviews

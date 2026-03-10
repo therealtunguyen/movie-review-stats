@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN uv pip install --system --no-cache -r requirements.txt
 
-COPY main.py .
+COPY main.py tmdb.py ./
 COPY results ./results
 
 EXPOSE 8000

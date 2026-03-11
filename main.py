@@ -1,3 +1,4 @@
+import os
 import time
 from contextlib import asynccontextmanager
 
@@ -12,7 +13,8 @@ from tmdb import fetch_reviews, search_movies
 
 load_dotenv()
 
-MODEL_PATH = "./results/best_model"
+HF_MODEL_REPO = os.getenv("HF_MODEL_REPO")
+MODEL_PATH = HF_MODEL_REPO if HF_MODEL_REPO else "./results/best_model"
 
 ml: dict = {}
 
@@ -42,6 +44,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

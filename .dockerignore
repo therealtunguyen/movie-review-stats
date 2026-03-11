@@ -1,0 +1,8 @@
+.venv
+results/
+frontend/
+.worktrees/
+__pycache__/
+*.pyc
+.env
+.env.*

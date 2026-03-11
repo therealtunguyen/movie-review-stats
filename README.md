@@ -1,3 +1,13 @@
+---
+title: Sentiment Observatory API
+emoji: 🎬
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Sentiment Observatory
 
 Explore how audiences really feel about movies. Search any film, fetch real TMDB reviews, and visualise sentiment through interactive charts.

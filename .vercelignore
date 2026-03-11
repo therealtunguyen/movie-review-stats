@@ -1,0 +1,8 @@
+results/
+.venv/
+__pycache__/
+*.pyc
+.worktrees/
+frontend/node_modules/
+.env
+.env.*

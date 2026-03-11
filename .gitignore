@@ -17,3 +17,5 @@ __huggingface_repos__.json
 
 # Git worktrees
 .worktrees/
+
+.vercel
